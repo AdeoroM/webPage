@@ -40,6 +40,7 @@ func main() {
 	}
 	json.Unmarshal(byteValue, &baseUser)
 
+	http.HandleFunc("/", RedirectSignUpHandler)
 	http.HandleFunc("/signup", CreateSignUpHandler)
 	http.HandleFunc("/validate", ValidateSignUpHandler)
 	http.HandleFunc("/login", CreateLoginHandler)
@@ -63,6 +64,10 @@ func Render(w http.ResponseWriter, tmpl string, information interface{}) error {
 	}
 
 	return nil
+}
+
+func RedirectSignUpHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/signup", http.StatusSeeOther)
 }
 
 func CreateSignUpHandler(w http.ResponseWriter, r *http.Request) {

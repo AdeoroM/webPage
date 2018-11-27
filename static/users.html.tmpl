@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+  </head>
+  
+  <body>
+    <div class="container_login">
+      <a href="/login">Log out</a>
+      {{range .}}
+      <div id="content">
+        <div id="formLogin">
+          <div id="labelForm">
+            <label><strong>Email</strong></label> <label>{{.Email}}</label>
+          </div>
+          <div id="imageForm">
+            <img
+              src="{{.Image}}"
+              width="60px"
+              height="60px"
+            />
+          </div>
+        </div>
+
+      </div>
+      {{end}}
+    </div>
+  </body>
+</html>

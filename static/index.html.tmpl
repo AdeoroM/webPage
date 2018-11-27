@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <label class="centered">Sign Up</label>
+      <div id="content">
+        <form id="form" action="/validate" method="POST">
+          <div id="inputForm">
+            <label><strong>Email</strong></label>
+            <input
+              type="text"
+              name="Email"
+              class="credentials"
+              placeholder="Your Email"
+              value="{{.Email}}"
+            />
+            <span>{{index .Errors "Email"}}</span>
+            <span>{{index .Errors "EmailExist"}}</span>
+            <label><strong>Password</strong></label>
+            <input
+              type="password"
+              name="Password"
+              class="credentials"
+              placeholder="Your Password"
+              value="{{.Password}}"
+            />
+            <span>{{index .Errors "Password"}}</span>
+            <span>{{index .Errors "PasswordEmpty"}}</span>
+            <label><strong>Token</strong></label>
+            <input
+              type="password"
+              name="Token"
+              class="credentials"
+              placeholder="Secret Token"
+              value="ATw402zK"
+            />
+            <span>{{index .Errors "Token"}}</span>
+          </div>
+          <div id="bttForm">
+            <input
+              id="submitForm"
+              name="SubmitForm"
+              type="submit"
+              value="SIGN UP"
+            />
+          </div>
+        </form>
+      </div>
+      <a href="/login">Log In</a>
+    </div>
+  </body>
+</html>

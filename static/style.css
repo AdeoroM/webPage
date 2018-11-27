@@ -1,0 +1,150 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  margin: 150px auto;
+  height: auto;
+  width: 450px;
+}
+.container_login {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  margin: 150px auto;
+  height: auto;
+  width: 700px;
+}
+
+.container a {
+  color: black;
+}
+.container > div {
+  margin: 20px 0px;
+}
+
+.container_login a {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#content {
+  width: 100%;
+  box-shadow: 0 1px 3px rgb(141, 141, 141);
+  border: 1px solid white;
+  background: #f1f1f1;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.centered {
+  font-size: 20px;
+}
+
+#form {
+  display: flex;
+  margin: 35px 35px;
+  height: auto;
+  justify-content: space-around;
+  flex-flow: column wrap;
+}
+
+#formLogin {
+  display: flex;
+  margin: 15px 20px;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#labelForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#labelForm label {
+  margin: 5px 10px;
+}
+
+#inputForm {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  height: auto;
+}
+#inputForm2 {
+  display: none;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  height: auto;
+}
+
+.credentials {
+  width: 100%;
+  height: 35px;
+  border: 1px solid rgb(168, 168, 168);
+  font-size: 15px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 8px;
+}
+img {
+  border-radius: 50%;
+}
+
+.credentials::placeholder {
+  color: rgb(168, 168, 168);
+}
+
+#submitForm {
+  height: 45px;
+  width: 100%;
+  background-color: #4d92dd;
+  color: white;
+  margin: 10px 0px;
+  font-size: 17px;
+  border: 0px;
+}
+#submitForm2 {
+  display: none;
+  height: 45px;
+  width: 100%;
+  background-color: #4d92dd;
+  color: white;
+  margin: 10px 0px;
+  font-size: 17px;
+  border: 0px;
+}
+#continue {
+  height: 45px;
+  width: 100%;
+  background-color: #4d92dd;
+  color: white;
+  margin: 10px 0px;
+  font-size: 17px;
+  border: 0px;
+}
+
+#confirmation_password {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+}
+#confirmation_password a {
+  text-align: left;
+}
+
+#confirmation_password label {
+  margin-left: 25%;
+}
+
+#confirmation_password p {
+  display: flex;
+  width: 100%;
+}

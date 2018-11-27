@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <script type="text/javascript" src="/static/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="confirmation_password">
+       <p>
+        <a href="/login" onclick="back()">Back</a><label id="emailLogin"></label>
+        </p>
+      </div>
+      <div id="content">
+        <form id="form" action="/login/ok" method="POST">
+          <div id="inputForm">
+            <label><strong>Email</strong></label>
+            <input
+              type="text"
+              id="Email"
+              name="Email"
+              class="credentials"
+              placeholder="Your Email"
+              value="{{.Email}}"
+            />
+          </div>
+          <label id="lbltipAddedComment"></label>
+          <div id="inputForm2">
+            <label><strong>Password</strong></label>
+            <input
+              type="password"
+              name="Password"
+              class="credentials"
+              placeholder="Your Password"
+              value="{{.Password}}"
+            />
+          </div>
+          <div id="bttForm">
+            <input
+              id="continue"
+              name="Continue"
+              type="button"
+              onclick="change()"
+              value="CONTINUE"
+            />
+            <input
+              id="submitForm2"
+              name="SubmitForm"
+              type="submit"
+              value="LOG IN"
+            />
+          </div>
+          <span id="spanBadLogin">{{.BadLogin}}</span>
+        </form>
+      </div>
+      <a href="/signup">Sign Up</a>
+    </div>
+  </body>
+</html>
